@@ -4,14 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>TERAROSA 교육서비스팀 커피 소식지 [26년-1]</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"/>
+<link rel="stylesheet" href="style.css">
 
   
 </head>
 <body>
 
-  <!-- HEADER -->
+  <!-- 최상단 로고랑 제목 있는 부분 -->
 <header class="header-wrap">
   <div class="header-top">
   <button class="archive-btn" onclick="toggleArchive()">
@@ -29,7 +30,7 @@
  <img class="logo-img" src="img/logo.png" alt="TERAROSA" />
         <div class="header-right">
       <div class="issue">VOL. 26-1</div>
-      <div class="date">2026 Q1 · 교육서비스팀</div>
+      <div class="date">2026 V1 · 교육서비스팀</div>
     </div>
   </div>
   <div class="header-title-band">
@@ -38,20 +39,19 @@
   </div>
 </header>
 
-<!-- NAV -->
+<!-- 메뉴바 -->
 
 <nav class="nav-bar">
   <div class="nav-item active" onclick="scrollToSection('article', this)">커피 아티클</div>
-  <div class="nav-item" onclick="scrollToSection('report', this)">분기별 교육 리포트</div>
+  <div class="nav-item" onclick="scrollToSection('report', this)">교육 리포트</div>
   <div class="nav-item" onclick="scrollToSection('calendar', this)">교육 캘린더</div>
 </nav>
 
-<!-- MAIN -->
+<!-- 내용 있는 부분 -->
 
 <main class="main">
 
- 
-  <!-- 1. 아티클 -->
+  <!-- 이 부분이 아티클 부분입니다. 여기만 나중에 수정하면 됨!!!!!!!! -->
   <section id="article">
     <div class="sec-head fade-up">
       <div class="sec-head-bar"></div>
@@ -208,24 +208,24 @@
 
   <hr class="sec-divider" />
 
- <!-- 2. 교육 리포트 -->
+ <!-- 이 부분이 교육리포트입니다. 상세 숫자 및 내용은 script.js 파일로 수정합니다 -->
 
   <section id="report">
     <div class="sec-head fade-up">
       <div class="sec-head-bar"></div>
       <div class="sec-head-inner">
-        <div class="sec-head-en">02 · Quarterly Education Report</div>
-        <div class="sec-head-ko">분기별 교육 리포트</div>
+        <div class="sec-head-en">02 · Education Report</div>
+        <div class="sec-head-ko">교육 리포트</div>
       </div>
     </div>
-    <div class="report-intro fade-up d1">2026 Q1 · 총 6개 과정 집계</div>
+    <div class="report-intro fade-up d1">2026 JAN-FEB · 5개 과정</div>
 
 
 <div class="stat-grid" id="statGrid"></div>
 
 <div class="summary-row">
-  <div class="summary-label">Q1 TOTAL COMPLETIONS</div>
-  <div class="summary-total">230명 <small>총 수료</small></div>
+  <div class="summary-label">2026 JAN-FEB TOTAL COMPLETIONS</div>
+  <div class="summary-total">총 111명 수료 <small>점장 교육 수료자 27인 포함</small></div>
 </div>
 
 
@@ -233,7 +233,7 @@
 
   <hr class="sec-divider" />
 
-  <!-- 3. 캘린더 -->
+  <!-- 3. 이 부분이 캘린더입니다. 구글 캘린더만 수정하면 됩니다. -->
 
   <section id="calendar">
     <div class="sec-head fade-up">
@@ -244,10 +244,10 @@
       </div>
     </div>
 
-
+<!-- 첫 화면에 띄울 월을 바꾸고 싶으면 여기서 dates=뒷부분의 일/월을 바꾸면 됩니다. -->
 <div class="cal-frame">
   <iframe id="calIframe"
-    src="https://calendar.google.com/calendar/embed?src=terarosaeducation%40gmail.com&ctz=Asia%2FSeoul&mode=MONTH&dates=20260401%2F20260430"
+    src="https://calendar.google.com/calendar/embed?src=terarosaeducation%40gmail.com&ctz=Asia%2FSeoul&mode=MONTH&dates=20260301%2F20260331"
     title="TERAROSA 교육 캘린더"
     frameborder="0"
     scrolling="no"
@@ -260,7 +260,7 @@
 
 </main>
 
-<!-- TOP 버튼 -->
+<!-- TOP 버튼 둥둥 띄운 것 -->
 <button class="top-btn" id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="맨 위로">
   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
     <polyline points="18 15 12 9 6 15"/>
@@ -268,7 +268,7 @@
   <span>TOP</span>
 </button>
 
-<!-- FOOTER -->
+<!-- 바닥 부분 -->
 
 <footer class="footer">
   <img class="footer-logo" src="img/logo.png" alt="TERAROSA" />

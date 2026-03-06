@@ -25,13 +25,11 @@ body {
   line-height: 1.7;
 }
 
-/* ─── ARCHIVE BUTTON ─── */
-
-
+/* ─── 소식지 목록 드롭다운 버튼 ─── */
 .archive-btn {
-  position: absolute; /* 절대 위치로 변경 */
-  top: 1px;          /* 상단 여백 */
-  right: 45px;        /* 우측 여백 (모바일/웹 동일 적용) */
+  position: absolute; 
+  top: 1px;          
+  right: 45px;       
   z-index: 100;
   background: var(--white);
   color: var(--red);
@@ -50,8 +48,8 @@ body {
 .archive-btn svg { flex-shrink: 0; }
 
 .archive-panel {
-  position: absolute; /* 절대 위치로 변경 */
-  top: 10px;          /* 버튼 바로 아래에 위치하도록 조정 */
+  position: absolute; 
+  top: 10px;          
   right: 24px;
   z-index: 999;
   background: var(--white);
@@ -94,12 +92,12 @@ body {
   border: 1px solid var(--red-muted);
 }
 
-/* ─── HEADER ─── */
+/* ─── 최상단 ─── */
 .header-wrap {
   border-bottom: 3px solid var(--red);
 }
 .header-top {
-  position: relative; /* 버튼 위치의 기준점이 됩니다 */
+  position: relative; 
   background: var(--white);
   padding: 28px 48px 20px;
   display: flex;
@@ -134,12 +132,13 @@ body {
   padding: 20px 48px;
 }
 .header-title-band h1 {
-  font-family: 'Noto Serif KR', serif;
+  font-family: 'Pretendard', sans-serif;
   font-size: clamp(22px, 3.5vw, 36px);
   font-weight: 700;
   color: var(--white);
-  letter-spacing: -0.5px;
+  letter-spacing: 2px;
 }
+
 .header-title-band p {
   font-family: 'DM Mono', monospace;
   font-size: 11px;
@@ -148,16 +147,16 @@ body {
   margin-top: 6px;
 }
 
-/* ─── NAV ─── */
+/* ─── 메뉴바 ─── */
 .nav-bar {
   background: var(--white);
   border-bottom: 1px solid var(--gray-200);
   display: flex;
   padding: 0 48px;
   overflow-x: auto;
-  position: sticky; /* 스크롤 위치에 따라 고정 모드로 전환 */
-  top: 0;           /* 화면 최상단(0px)에 고정 */
-  z-index: 900;     /* 본문 내용보다 위에 뜨도록 순서 지정 */
+  position: sticky; /* 메뉴바 고정 */
+  top: 0;          
+  z-index: 900;    
 }
 
 .nav-item {
@@ -175,21 +174,20 @@ body {
 .nav-item:hover { color: var(--red); }
 .nav-item.active { color: var(--red); border-bottom-color: var(--red); }
 
-/* ─── LAYOUT ─── */
+/* ─── 메인 내용 부분 레이아웃 ─── */
 .main {
   max-width: 1080px;
   margin: 0 auto;
   padding: 56px 40px 80px;
 }
 
-/* 섹션별 스크롤 위치 조정 */
+
 section {
-  /* 네비게이션 바 높이(약 50~60px)보다 조금 더 여유 있게 설정 */
   scroll-margin-top: 80px; 
 }
 
 
-/* ─── SECTION HEADING ─── */
+/* ─── 섹션별 최상단 제목 부분 ─── */
 .sec-head {
   display: flex;
   align-items: center;
@@ -198,7 +196,7 @@ section {
 }
 .sec-head-bar {
   width: 4px;
-  height: 28px;
+  height: 50px;
   background: var(--red);
   flex-shrink: 0;
 }
@@ -212,17 +210,18 @@ section {
   margin-bottom: 3px;
 }
 .sec-head-ko {
-  font-family: 'Noto Serif KR', serif;
-  font-size: 24px;
+  font-family: 'pretendard', sans-serif;
+  font-size: 22px;
   font-weight: 700;
+  letter-spacing: 2px;
   color: var(--black);
   line-height: 1;
 }
 
-/* ─── SECTION DIVIDER ─── */
+/* ─── 섹션 사이의 선 ─── */
 .sec-divider { border: none; border-top: 1px solid var(--gray-200); margin: 72px 0; }
 
-/* ─── REPORT ─── */
+/* ─── 교육 리포트 ─── */
 .report-intro {
   font-size: 13px;
   color: var(--gray-600);
@@ -256,6 +255,26 @@ section {
   width: 3px; height: 100%;
   background: var(--red);
 }
+
+/* 점장/세컨교육만 네이비로 변경 */
+.stat-card--navy .stat-bar-fill {
+  background-color: #1a2e5a; 
+}
+
+.stat-card--navy .stat-num {
+  color: #1a2e5a;
+}
+
+.stat-card--navy::after {
+  background: #1a2e5a;
+}
+
+.stat-card--navy:hover {
+  border-color: #1a2e5a;
+  box-shadow: 0 4px 20px rgba(26,46,90,0.08);
+}
+
+
 
 .stat-top {
   display: flex;
@@ -322,18 +341,22 @@ section {
   color: rgba(255,255,255,0.7);
 }
 .summary-total {
-  font-family: 'Noto Serif KR', serif;
-  font-size: 26px;
+  font-family: 'pretendard', sans-serif;
+  font-size: 25px;
   font-weight: 700;
+  letter-spacing: 3px;
   color: var(--white);
 }
 .summary-total small {
   font-size: 13px;
   font-weight: 400;
-  opacity: 0.75;
+  letter-spacing: 1px;
+  opacity: 0.85;
 }
 
-/* ─── ARTICLE ─── */
+
+
+/* ─── 커피 아티클 ─── */
   .article-card {
       --red: #D93025;
       --black: #202124;
@@ -563,7 +586,7 @@ section {
 }
 
 
-/* ─── CALENDAR ─── */
+/* ─── 교육 캘린더 ─── */
 .cal-nav {
   display: flex;
   align-items: center;
@@ -624,34 +647,30 @@ section {
   text-align: right;
 }
 
-/* ─── MEDIA QUERIES (Mobile) ─── */
+/* ─── 모바일 최적화 ─── */
 @media (max-width: 680px) {
-  /* 1. 기본 패딩 조정 (기존 코드) */
   .header-top, .header-title-band, .nav-bar, .main, .footer { 
     padding-left: 20px; padding-right: 20px; 
   }
   .article-body { padding: 28px 20px; }
   .stat-grid { grid-template-columns: 1fr; }
 
-  /* 2. 상단 헤더 레이아웃 변경 (추가된 부분) */
   .header-top {
-    flex-direction: column;    /* 세로로 쌓기 */
-    align-items: flex-start;   /* 왼쪽 정렬 */
-    padding-top: 60px;         /* 아카이브 버튼 공간 확보 */
+    flex-direction: column;    
+    align-items: flex-start;   
+    padding-top: 60px;        
   }
   
   .header-right {
-    text-align: left;          /* 텍스트 왼쪽 정렬 */
-    margin-top: 12px;          /* 로고와의 간격 */
+    text-align: left;         
+    margin-top: 12px;     
     margin-left: 2px;
   }
 
-  /* 3. 영문 타이틀 두 줄로 만들기 (추가된 부분) */
-  /* '·' 문자를 기준으로 강제 줄바꿈을 하는 트릭입니다 */
   .header-title-band p {
     font-size: 10px;
     line-height: 1.6;
-    max-width: 220px; /* 너비를 제한해서 자연스럽게 줄바꿈 유도 */
+    max-width: 220px; 
   }
 }
 
@@ -663,7 +682,7 @@ section {
 .d2 { animation-delay: 0.12s; }
 .d3 { animation-delay: 0.2s; }
 
-/* ─── TOP BUTTON ─── */
+/* ─── TOP 버튼 둥둥이 ─── */
 .top-btn {
   position: fixed;
   bottom: 32px;
